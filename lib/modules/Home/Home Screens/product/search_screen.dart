@@ -80,7 +80,7 @@ Widget _foundSearchScreen(context, List list) {
       physics: const BouncingScrollPhysics(),
       mainAxisSpacing: rheight(context) / 50,
       crossAxisSpacing: rwidth(context) / 50,
-      childAspectRatio: rheight(context) / 1200,
+      childAspectRatio: .7,
       children: List.generate(
         list.length,
         (int index) {
