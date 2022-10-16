@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mega_store/modules/Home/Home%20Layout/home_layout.dart';
+import 'package:mega_store/modules/SignIn/sign_in_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
                 SystemUiOverlayStyle(statusBarColor: Colors.transparent)),
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeLayout(),
+      home: const SignInScreen(),
     );
   }
 }
