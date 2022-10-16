@@ -31,13 +31,15 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.10.0
-
+  flutter_native_splash: ^2.2.11
   flutter_lints: ^2.0.0
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/splash.png  
 flutter_icons:
   android: true
   image_path: "assets/images/app_icon.png" 
 flutter:
-
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mega_store/modules/Home/Home%20Screens/profile/order_details_screen.dart';
 import 'package:mega_store/shared/app_colors.dart';
 import 'package:mega_store/shared/app_textstyle.dart';
 import 'package:mega_store/shared/responsive.dart';
+import 'package:mega_store/shared/shared_method.dart';
 
 class MyOrder extends StatelessWidget {
   final String title;
@@ -19,81 +21,88 @@ class MyOrder extends StatelessWidget {
       required this.price});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: rheight(context) / 4,
-      width: rwidth(context),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(width: 1, color: AppColors.grey.withOpacity(.5))),
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: rwidth(context) / 50, vertical: rheight(context) / 60),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              title,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: AppTextStyle.appBar.copyWith(fontSize: 18),
-            ),
-            SizedBox(
-              height: rheight(context) / 50,
-            ),
-            Text(
-              decription,
-              style: AppTextStyle.details,
-            ),
-            SizedBox(
-              height: rheight(context) / 30,
-            ),
-            Row(
-              children: [
-                Text(
-                  'order status',
-                  style: AppTextStyle.details,
-                ),
-                const Spacer(),
-                Text(
-                  orderStatus,
-                  style: AppTextStyle.details,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: rheight(context) / 100,
-            ),
-            Row(
-              children: [
-                Text(
-                  'Items',
-                  style: AppTextStyle.details,
-                ),
-                const Spacer(),
-                Text(
-                  '$numOfitems items Purchase',
-                  style: AppTextStyle.details,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: rheight(context) / 100,
-            ),
-            Row(
-              children: [
-                Text(
-                  'Price',
-                  style: AppTextStyle.details,
-                ),
-                const Spacer(),
-                Text(
-                  r'$' '$price',
-                  style: AppTextStyle.details.copyWith(
-                      color: AppColors.black, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ],
+    return InkWell(
+      onTap: () {
+        navigatTo(context, screen: const OrderDetailsScreen());
+      },
+      child: Ink(
+        height: rheight(context) / 4,
+        width: rwidth(context),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            border:
+                Border.all(width: 1, color: AppColors.grey.withOpacity(.5))),
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: rwidth(context) / 50,
+              vertical: rheight(context) / 60),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: AppTextStyle.appBar.copyWith(fontSize: 18),
+              ),
+              SizedBox(
+                height: rheight(context) / 50,
+              ),
+              Text(
+                decription,
+                style: AppTextStyle.details,
+              ),
+              SizedBox(
+                height: rheight(context) / 30,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'order status',
+                    style: AppTextStyle.details,
+                  ),
+                  const Spacer(),
+                  Text(
+                    orderStatus,
+                    style: AppTextStyle.details,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: rheight(context) / 100,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Items',
+                    style: AppTextStyle.details,
+                  ),
+                  const Spacer(),
+                  Text(
+                    '$numOfitems items Purchase',
+                    style: AppTextStyle.details,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: rheight(context) / 100,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Price',
+                    style: AppTextStyle.details,
+                  ),
+                  const Spacer(),
+                  Text(
+                    r'$' '$price',
+                    style: AppTextStyle.details.copyWith(
+                        color: AppColors.black, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
