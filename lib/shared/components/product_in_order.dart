@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:mega_store/shared/app_colors.dart';
 import 'package:mega_store/shared/app_textstyle.dart';
 import 'package:mega_store/shared/components/shared_component.dart';
@@ -24,7 +22,7 @@ class ProductInOrder extends StatelessWidget {
             width: rwidth(context) / 4,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             clipBehavior: Clip.antiAlias,
-            child: ImageWithFadeIn(
+            child: const ImageWithFadeIn(
                 image:
                     'http://images4.fanpop.com/image/photos/19400000/rainbow-sky-beautiful-pictures-19401741-1093-614.jpg'),
           ),

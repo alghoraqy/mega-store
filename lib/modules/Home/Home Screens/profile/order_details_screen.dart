@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:mega_store/shared/app_colors.dart';
 import 'package:mega_store/shared/app_textstyle.dart';
 import 'package:mega_store/shared/components/product_in_order.dart';
 import 'package:mega_store/shared/components/shared_component.dart';
 import 'package:mega_store/shared/components/stepper_component.dart';
-import 'package:mega_store/shared/hex_colors.dart';
 import 'package:mega_store/shared/responsive.dart';
 
 class OrderDetailsScreen extends StatelessWidget {
@@ -46,7 +43,7 @@ class OrderDetailsScreen extends StatelessWidget {
                       child: ListView.separated(
                           physics: const BouncingScrollPhysics(),
                           itemBuilder: (context, index) {
-                            return ProductInOrder();
+                            return const ProductInOrder();
                           },
                           separatorBuilder: (context, index) {
                             return SizedBox(
@@ -136,7 +133,7 @@ class OrderDetailsScreen extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Container(
+                                SizedBox(
                                   width: rwidth(context) / 2,
                                   child: Text(
                                     'Total Price',
@@ -147,7 +144,7 @@ class OrderDetailsScreen extends StatelessWidget {
                                         color: AppColors.black),
                                   ),
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Text(
                                   r'$7854.2',
                                   maxLines: 1,
@@ -176,7 +173,7 @@ class OrderDetailsScreen extends StatelessWidget {
 Widget rowItem(context, {required String title, required String text}) {
   return Row(
     children: [
-      Container(
+      SizedBox(
         width: rwidth(context) / 2,
         child: Text(
           title,
@@ -185,8 +182,8 @@ Widget rowItem(context, {required String title, required String text}) {
           style: AppTextStyle.details,
         ),
       ),
-      Spacer(),
-      Container(
+      const Spacer(),
+      SizedBox(
         width: rwidth(context) / 2.95,
         child: Text(
           text,
@@ -202,7 +199,7 @@ Widget rowItem(context, {required String title, required String text}) {
 Widget rowPaymentItem(context, {required String title, required String text}) {
   return Row(
     children: [
-      Container(
+      SizedBox(
         width: rwidth(context) / 2,
         child: Text(
           title,
@@ -211,7 +208,7 @@ Widget rowPaymentItem(context, {required String title, required String text}) {
           style: AppTextStyle.details,
         ),
       ),
-      Spacer(),
+      const Spacer(),
       Text(
         text,
         maxLines: 1,

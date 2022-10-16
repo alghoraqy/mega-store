@@ -15,14 +15,14 @@ int current = 0;
 class _MyStepperState extends State<MyStepper> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: rheight(context) / 7,
       child: Theme(
         data: ThemeData(
             colorScheme: ColorScheme.light(primary: HexColor('#087DA9'))),
         child: Stepper(
           elevation: 0,
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           controlsBuilder: (context, details) {
             return Container();
           },
@@ -30,30 +30,30 @@ class _MyStepperState extends State<MyStepper> {
           currentStep: current,
           steps: [
             Step(
-              label: Text('Packing'),
-              title: Text(''),
-              content: SizedBox(),
+              label: const Text('Packing'),
+              title: const Text(''),
+              content: const SizedBox(),
               state: StepState.complete,
               isActive: current >= 0 ? true : false,
             ),
             Step(
-              title: Text(''),
-              content: SizedBox(),
-              label: Text('Shipping'),
+              title: const Text(''),
+              content: const SizedBox(),
+              label: const Text('Shipping'),
               state: StepState.complete,
               isActive: current >= 1 ? true : false,
             ),
             Step(
-              title: Text(''),
-              content: SizedBox(),
-              label: Text('Arriving'),
+              title: const Text(''),
+              content: const SizedBox(),
+              label: const Text('Arriving'),
               state: StepState.complete,
               isActive: current >= 2 ? true : false,
             ),
             Step(
-              title: Text(''),
-              content: SizedBox(),
-              label: Text('Success'),
+              title: const Text(''),
+              content: const SizedBox(),
+              label: const Text('Success'),
               state: StepState.complete,
               isActive: current >= 3 ? true : false,
             ),
@@ -61,7 +61,7 @@ class _MyStepperState extends State<MyStepper> {
           onStepTapped: (value) {
             setState(() {
               current = value;
-              print(current);
+              // print(current);
             });
           },
         ),
