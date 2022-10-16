@@ -67,32 +67,35 @@ class OrderDetailsScreen extends StatelessWidget {
                           border: Border.all(
                               color: AppColors.grey.withOpacity(.5))),
                       child: Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: rwidth(context) / 50,
-                            vertical: rheight(context) / 80),
-                        child: Column(
-                          children: [
-                            rowItem(context,
-                                title: 'Date Shipping',
-                                text: 'January 16, 2020'),
-                            SizedBox(
-                              height: rheight(context) / 50,
-                            ),
-                            rowItem(context,
-                                title: 'Shipping', text: 'POS Reggular'),
-                            SizedBox(
-                              height: rheight(context) / 50,
-                            ),
-                            rowItem(context,
-                                title: 'No. Resi', text: '000192848573'),
-                            SizedBox(
-                              height: rheight(context) / 50,
-                            ),
-                            rowItem(context,
-                                title: 'Address',
-                                text:
-                                    '2727 New  Owerri, Owerri, Imo State 78410'),
-                          ],
+                        padding: EdgeInsets.only(
+                            left: rwidth(context) / 50,
+                            right: rwidth(context) / 50,
+                            top: rheight(context) / 80),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              rowItem(context,
+                                  title: 'Date Shipping',
+                                  text: 'January 16, 2020'),
+                              SizedBox(
+                                height: rheight(context) / 50,
+                              ),
+                              rowItem(context,
+                                  title: 'Shipping', text: 'POS Reggular'),
+                              SizedBox(
+                                height: rheight(context) / 50,
+                              ),
+                              rowItem(context,
+                                  title: 'No. Resi', text: '000192848573'),
+                              SizedBox(
+                                height: rheight(context) / 50,
+                              ),
+                              rowItem(context,
+                                  title: 'Address',
+                                  text:
+                                      '2727 New  Owerri, Owerri, Imo State 78410'),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -111,51 +114,54 @@ class OrderDetailsScreen extends StatelessWidget {
                           border: Border.all(
                               color: AppColors.grey.withOpacity(.5))),
                       child: Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: rwidth(context) / 50,
-                            vertical: rheight(context) / 80),
-                        child: Column(
-                          children: [
-                            rowPaymentItem(context,
-                                title: 'Items (3)', text: r'$598.86'),
-                            SizedBox(
-                              height: rheight(context) / 50,
-                            ),
-                            rowPaymentItem(context,
-                                title: 'Shipping', text: r'$40.00'),
-                            SizedBox(
-                              height: rheight(context) / 50,
-                            ),
-                            rowPaymentItem(context,
-                                title: 'Import charges', text: r'$128.00'),
-                            SizedBox(
-                              height: rheight(context) / 50,
-                            ),
-                            Row(
-                              children: [
-                                SizedBox(
-                                  width: rwidth(context) / 2,
-                                  child: Text(
-                                    'Total Price',
+                        padding: EdgeInsets.only(
+                            left: rwidth(context) / 50,
+                            right: rwidth(context) / 50,
+                            top: rheight(context) / 80),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              rowPaymentItem(context,
+                                  title: 'Items (3)', text: r'$598.86'),
+                              SizedBox(
+                                height: rheight(context) / 50,
+                              ),
+                              rowPaymentItem(context,
+                                  title: 'Shipping', text: r'$40.00'),
+                              SizedBox(
+                                height: rheight(context) / 50,
+                              ),
+                              rowPaymentItem(context,
+                                  title: 'Import charges', text: r'$128.00'),
+                              SizedBox(
+                                height: rheight(context) / 50,
+                              ),
+                              Row(
+                                children: [
+                                  SizedBox(
+                                    width: rwidth(context) / 2,
+                                    child: Text(
+                                      'Total Price',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: AppTextStyle.details.copyWith(
+                                          fontWeight: FontWeight.bold,
+                                          color: AppColors.black),
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  Text(
+                                    r'$7854.2',
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: AppTextStyle.details.copyWith(
-                                        fontWeight: FontWeight.bold,
-                                        color: AppColors.black),
+                                        color: AppColors.black,
+                                        fontWeight: FontWeight.bold),
                                   ),
-                                ),
-                                const Spacer(),
-                                Text(
-                                  r'$7854.2',
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: AppTextStyle.details.copyWith(
-                                      color: AppColors.black,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            )
-                          ],
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     )

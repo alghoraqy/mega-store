@@ -33,9 +33,10 @@ class ShipToItem extends StatelessWidget {
                   : AppColors.grey,
             )),
         child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: rwidth(context) / 35,
-              vertical: rheight(context) / 50),
+          padding: EdgeInsets.only(
+              left: rwidth(context) / 35,
+              right: rwidth(context) / 35,
+              top: rheight(context) / 50),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

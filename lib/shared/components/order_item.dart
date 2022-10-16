@@ -33,9 +33,10 @@ class MyOrder extends StatelessWidget {
             border:
                 Border.all(width: 1, color: AppColors.grey.withOpacity(.5))),
         child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: rwidth(context) / 50,
-              vertical: rheight(context) / 60),
+          padding: EdgeInsets.only(
+              right: rwidth(context) / 50,
+              left: rwidth(context) / 50,
+              top: rheight(context) / 60),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

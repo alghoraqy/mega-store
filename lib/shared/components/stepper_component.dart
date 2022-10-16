@@ -16,7 +16,7 @@ class _MyStepperState extends State<MyStepper> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: rheight(context) / 7,
+      height: rheight(context) / 6.9,
       child: Theme(
         data: ThemeData(
             colorScheme: ColorScheme.light(primary: HexColor('#087DA9'))),
