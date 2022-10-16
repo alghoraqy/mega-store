@@ -213,7 +213,7 @@ class HomeScreen extends StatelessWidget {
                       height: rheight(context) / 100,
                     ),
                     SizedBox(
-                      height: rheight(context) / 3.1,
+                      height: rheight(context) / 3,
                       child: ListView.separated(
                           physics: const BouncingScrollPhysics(),
                           scrollDirection: Axis.horizontal,
@@ -247,7 +247,7 @@ class HomeScreen extends StatelessWidget {
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                       crossAxisCount: 2,
-                      childAspectRatio: rheight(context) / 1200,
+                      childAspectRatio: .7,
                       crossAxisSpacing: rheight(context) / 100,
                       children: List.generate(
                           cubit.products.length,
