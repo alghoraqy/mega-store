@@ -36,72 +36,74 @@ class MyOrder extends StatelessWidget {
           padding: EdgeInsets.symmetric(
               horizontal: rwidth(context) / 50,
               vertical: rheight(context) / 60),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: AppTextStyle.appBar.copyWith(fontSize: 18),
-              ),
-              SizedBox(
-                height: rheight(context) / 50,
-              ),
-              Text(
-                decription,
-                style: AppTextStyle.details,
-              ),
-              SizedBox(
-                height: rheight(context) / 30,
-              ),
-              Row(
-                children: [
-                  Text(
-                    'order status',
-                    style: AppTextStyle.details,
-                  ),
-                  const Spacer(),
-                  Text(
-                    orderStatus,
-                    style: AppTextStyle.details,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: rheight(context) / 100,
-              ),
-              Row(
-                children: [
-                  Text(
-                    'Items',
-                    style: AppTextStyle.details,
-                  ),
-                  const Spacer(),
-                  Text(
-                    '$numOfitems items Purchase',
-                    style: AppTextStyle.details,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: rheight(context) / 100,
-              ),
-              Row(
-                children: [
-                  Text(
-                    'Price',
-                    style: AppTextStyle.details,
-                  ),
-                  const Spacer(),
-                  Text(
-                    r'$' '$price',
-                    style: AppTextStyle.details.copyWith(
-                        color: AppColors.black, fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppTextStyle.appBar.copyWith(fontSize: 18),
+                ),
+                SizedBox(
+                  height: rheight(context) / 50,
+                ),
+                Text(
+                  decription,
+                  style: AppTextStyle.details,
+                ),
+                SizedBox(
+                  height: rheight(context) / 30,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'order status',
+                      style: AppTextStyle.details,
+                    ),
+                    const Spacer(),
+                    Text(
+                      orderStatus,
+                      style: AppTextStyle.details,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: rheight(context) / 100,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Items',
+                      style: AppTextStyle.details,
+                    ),
+                    const Spacer(),
+                    Text(
+                      '$numOfitems items Purchase',
+                      style: AppTextStyle.details,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: rheight(context) / 100,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Price',
+                      style: AppTextStyle.details,
+                    ),
+                    const Spacer(),
+                    Text(
+                      r'$' '$price',
+                      style: AppTextStyle.details.copyWith(
+                          color: AppColors.black, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

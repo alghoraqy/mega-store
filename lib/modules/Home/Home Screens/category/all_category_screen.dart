@@ -24,7 +24,7 @@ class AllCategoryScreen extends StatelessWidget {
               crossAxisCount: 3,
               physics: const BouncingScrollPhysics(),
               mainAxisSpacing: rheight(context) / 100,
-              childAspectRatio: rheight(context) / 1000,
+              childAspectRatio: .75,
               children: List.generate(
                 cubit.categories.length,
                 (int index) {

@@ -36,57 +36,59 @@ class ShipToItem extends StatelessWidget {
           padding: EdgeInsets.symmetric(
               horizontal: rwidth(context) / 35,
               vertical: rheight(context) / 50),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                model.title,
-                style: AppTextStyle.appBar.copyWith(fontSize: 18),
-              ),
-              SizedBox(
-                height: rheight(context) / 50,
-              ),
-              Text(
-                model.details,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: AppTextStyle.details.copyWith(fontSize: 16),
-              ),
-              SizedBox(
-                height: rheight(context) / 30,
-              ),
-              Text(
-                model.phone,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: AppTextStyle.details.copyWith(
-                  fontSize: 16,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  model.title,
+                  style: AppTextStyle.appBar.copyWith(fontSize: 18),
                 ),
-              ),
-              SizedBox(
-                height: rheight(context) / 50,
-              ),
-              Row(
-                children: [
-                  MyButton(
-                    onPressed: () {},
-                    width: rwidth(context) / 4,
-                    color: AppColors.lightblack,
-                    child: Text(
-                      'Edit',
-                      style: AppTextStyle.buttonText,
-                    ),
+                SizedBox(
+                  height: rheight(context) / 50,
+                ),
+                Text(
+                  model.details,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppTextStyle.details.copyWith(fontSize: 16),
+                ),
+                SizedBox(
+                  height: rheight(context) / 30,
+                ),
+                Text(
+                  model.phone,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppTextStyle.details.copyWith(
+                    fontSize: 16,
                   ),
-                  IconButton(
+                ),
+                SizedBox(
+                  height: rheight(context) / 50,
+                ),
+                Row(
+                  children: [
+                    MyButton(
                       onPressed: () {},
-                      icon: const Icon(
-                        Icons.delete_outline,
-                        color: Colors.grey,
-                        size: 35,
-                      ))
-                ],
-              )
-            ],
+                      width: rwidth(context) / 4,
+                      color: AppColors.lightblack,
+                      child: Text(
+                        'Edit',
+                        style: AppTextStyle.buttonText,
+                      ),
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.delete_outline,
+                          color: Colors.grey,
+                          size: 35,
+                        ))
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
