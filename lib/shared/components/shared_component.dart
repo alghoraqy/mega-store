@@ -237,7 +237,7 @@ Future myBottomSheet(
       isDismissible: true,
       enableDrag: true,
       isScrollControlled: isControlled ?? false,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),),
       context: context,
       builder: (context) {
         return Padding(

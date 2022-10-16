@@ -116,6 +116,7 @@ class SignUpScreen extends StatelessWidget {
                                   prefix: Icons.lock_outline,
                                   controller: cubit.confirmPasswordController,
                                   inputType: TextInputType.visiblePassword,
+                                  isPassword: true,
                                   validate: (value) {
                                     if (value!.isEmpty) {
                                       return AppString.emptyConfirmPassword;

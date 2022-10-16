@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
                 SystemUiOverlayStyle(statusBarColor: Colors.transparent)),
       ),
       debugShowCheckedModeBanner: false,
+      builder: (context, child) {
+        return MediaQuery(data: MediaQuery.of(context).copyWith(textScaleFactor: 1), child: child!) ;
+      },
       home: const SignInScreen(),
     );
   }

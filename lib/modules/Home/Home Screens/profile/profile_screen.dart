@@ -33,7 +33,7 @@ class ProfileScreen extends StatelessWidget {
                         isControlled: true,
                         context,
                         child: SizedBox(
-                          height: rheight(context) / 2.3,
+                          height: rheight(context) / 2.2,
                           child: Padding(
                             padding: EdgeInsets.symmetric(
                                 horizontal: rwidth(context) / 30,
@@ -201,7 +201,7 @@ class ProfileScreen extends StatelessWidget {
                       myBottomSheet(context,
                           isControlled: true,
                           child: SizedBox(
-                            height: rheight(context) / 1.7,
+                            height: rheight(context) / 1.5,
                             child: Padding(
                               padding: EdgeInsets.symmetric(
                                   horizontal: rwidth(context) / 30,

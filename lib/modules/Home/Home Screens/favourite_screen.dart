@@ -38,17 +38,6 @@ class FavouriteScreen extends StatelessWidget {
                         ),
                       ),
                     )
-                  // Center(
-                  //     child: Padding(
-                  //       padding: EdgeInsets.symmetric(
-                  //           horizontal: rwidth(context) / 40),
-                  //       child:
-                  // Text(
-                  //         'There is no favourite yet!!',
-                  //         style: AppTextStyle.appBar.copyWith(fontSize: 22),
-                  //       ),
-                  //     ),
-                  //   )
                   : GridView.count(
                       padding: EdgeInsets.symmetric(
                           horizontal: rwidth(context) / 50,
