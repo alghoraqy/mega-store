@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,60 +29,64 @@ class ForgetPasswordScreen extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(top: rheight(context) / 30),
               child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    const LogoWithText(
-                      firstText: AppString.forgetPassword,
-                      secondText: AppString.forgetPassword2,
-                    ),
-                    SizedBox(
-                      height: rheight(context) / 10,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: rwidth(context) / 25,
-                          vertical: rheight(context) / 30),
-                      child: Form(
-                        key: cubit.formKeyForgetPassword,
-                        child: Column(
-                          children: [
-                            MyFormField(
-                                hint: ' You email',
-                                prefix: Icons.email_outlined,
-                                controller: cubit.forgetpasswordController,
-                                validate: (value) {
-                                  if (value!.isEmpty) {
-                                    return AppString.emptyEmail;
-                                  } else {
-                                    if (!value.contains('@')) {
-                                      return AppString.notValidEmail;
+                child: FadeInRight(
+                  child: Column(
+                    children: [
+                      const LogoWithText(
+                        firstText: AppString.forgetPassword,
+                        secondText: AppString.forgetPassword2,
+                      ),
+                      SizedBox(
+                        height: rheight(context) / 10,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: rwidth(context) / 25,
+                            vertical: rheight(context) / 30),
+                        child: Form(
+                          key: cubit.formKeyForgetPassword,
+                          child: Column(
+                            children: [
+                              MyFormField(
+                                  hint: ' You email',
+                                  prefix: Icons.email_outlined,
+                                  controller: cubit.forgetpasswordController,
+                                  validate: (value) {
+                                    if (value!.isEmpty) {
+                                      return AppString.emptyEmail;
+                                    } else {
+                                      if (!value.contains('@')) {
+                                        return AppString.notValidEmail;
+                                      }
                                     }
-                                  }
-                                  return null;
-                                },
-                                inputType: TextInputType.emailAddress),
-                            SizedBox(
-                              height: rheight(context) / 20,
-                            ),
-                            MyButton(
-                                child: Text(
-                                  'Send',
-                                  style: AppTextStyle.buttonText,
-                                ),
-                                onPressed: () {
-                                  if (cubit.formKeyForgetPassword.currentState!
-                                      .validate()) {
-                                    navigatTo(context,
-                                        screen: BlocProvider.value(
-                                            value: LoginCubit.get(context),
-                                            child: const VerificationScreen()));
-                                  }
-                                })
-                          ],
+                                    return null;
+                                  },
+                                  inputType: TextInputType.emailAddress),
+                              SizedBox(
+                                height: rheight(context) / 20,
+                              ),
+                              MyButton(
+                                  child: Text(
+                                    'Send',
+                                    style: AppTextStyle.buttonText,
+                                  ),
+                                  onPressed: () {
+                                    if (cubit
+                                        .formKeyForgetPassword.currentState!
+                                        .validate()) {
+                                      navigatTo(context,
+                                          screen: BlocProvider.value(
+                                              value: LoginCubit.get(context),
+                                              child:
+                                                  const VerificationScreen()));
+                                    }
+                                  })
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
