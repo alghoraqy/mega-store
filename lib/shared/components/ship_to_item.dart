@@ -21,8 +21,8 @@ class ShipToItem extends StatelessWidget {
     return InkWell(
       onTap: onpressed,
       child: Ink(
-        height: rheight(context) / 3.3,
-        width: rwidth(context),
+        padding: EdgeInsets.symmetric(
+            vertical: rheight(context) / 50, horizontal: rwidth(context) / 100),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Colors.white,
@@ -34,9 +34,9 @@ class ShipToItem extends StatelessWidget {
             )),
         child: Padding(
           padding: EdgeInsets.only(
-              left: rwidth(context) / 35,
-              right: rwidth(context) / 35,
-              top: rheight(context) / 50),
+            left: rwidth(context) / 35,
+            right: rwidth(context) / 35,
+          ),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

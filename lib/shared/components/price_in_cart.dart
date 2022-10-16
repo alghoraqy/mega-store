@@ -23,94 +23,93 @@ class PriceInCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: rheight(context) / 5,
-      width: rwidth(context),
+      padding: EdgeInsets.symmetric(
+        horizontal: rwidth(context) / 100,
+      ),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: AppColors.grey.withOpacity(.5))),
       child: Padding(
         padding: EdgeInsets.symmetric(
             horizontal: rwidth(context) / 60, vertical: rheight(context) / 70),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Text(
-                    'Items ($numOfItems)',
-                    style: AppTextStyle.greyBold
-                        .copyWith(fontSize: 15, fontWeight: FontWeight.w400),
-                  ),
-                  const Spacer(),
-                  Text(
-                    r'$' '$itemsPrice',
-                    style: AppTextStyle.appBar
-                        .copyWith(fontSize: 15, fontWeight: FontWeight.w500),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: rheight(context) / 80,
-              ),
-              Row(
-                children: [
-                  Text(
-                    'Shipping',
-                    style: AppTextStyle.greyBold
-                        .copyWith(fontSize: 15, fontWeight: FontWeight.w400),
-                  ),
-                  const Spacer(),
-                  Text(
-                    r'$' '$shippingPrice',
-                    style: AppTextStyle.appBar
-                        .copyWith(fontSize: 15, fontWeight: FontWeight.w500),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: rheight(context) / 80,
-              ),
-              Row(
-                children: [
-                  Text(
-                    'Import charges',
-                    style: AppTextStyle.greyBold
-                        .copyWith(fontSize: 15, fontWeight: FontWeight.w400),
-                  ),
-                  const Spacer(),
-                  Text(
-                    r'$' '$importChargesPrice',
-                    style: AppTextStyle.appBar
-                        .copyWith(fontSize: 15, fontWeight: FontWeight.w500),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: rheight(context) / 60,
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: rwidth(context) / 20),
-                child: const MyDashedSeparator(height: .5),
-              ),
-              SizedBox(
-                height: rheight(context) / 80,
-              ),
-              Row(
-                children: [
-                  Text(
-                    'Total Price',
-                    style: AppTextStyle.appBar.copyWith(fontSize: 15),
-                  ),
-                  const Spacer(),
-                  Text(
-                    r'$' '$totalPrice',
-                    style: AppTextStyle.appBar
-                        .copyWith(fontSize: 15, color: HexColor('#40BFFF')),
-                  )
-                ],
-              ),
-            ],
-          ),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Text(
+                  'Items ($numOfItems)',
+                  style: AppTextStyle.greyBold
+                      .copyWith(fontSize: 15, fontWeight: FontWeight.w400),
+                ),
+                const Spacer(),
+                Text(
+                  r'$' '$itemsPrice',
+                  style: AppTextStyle.appBar
+                      .copyWith(fontSize: 15, fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+            SizedBox(
+              height: rheight(context) / 80,
+            ),
+            Row(
+              children: [
+                Text(
+                  'Shipping',
+                  style: AppTextStyle.greyBold
+                      .copyWith(fontSize: 15, fontWeight: FontWeight.w400),
+                ),
+                const Spacer(),
+                Text(
+                  r'$' '$shippingPrice',
+                  style: AppTextStyle.appBar
+                      .copyWith(fontSize: 15, fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+            SizedBox(
+              height: rheight(context) / 80,
+            ),
+            Row(
+              children: [
+                Text(
+                  'Import charges',
+                  style: AppTextStyle.greyBold
+                      .copyWith(fontSize: 15, fontWeight: FontWeight.w400),
+                ),
+                const Spacer(),
+                Text(
+                  r'$' '$importChargesPrice',
+                  style: AppTextStyle.appBar
+                      .copyWith(fontSize: 15, fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+            SizedBox(
+              height: rheight(context) / 60,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: rwidth(context) / 20),
+              child: const MyDashedSeparator(height: .5),
+            ),
+            SizedBox(
+              height: rheight(context) / 80,
+            ),
+            Row(
+              children: [
+                Text(
+                  'Total Price',
+                  style: AppTextStyle.appBar.copyWith(fontSize: 15),
+                ),
+                const Spacer(),
+                Text(
+                  r'$' '$totalPrice',
+                  style: AppTextStyle.appBar
+                      .copyWith(fontSize: 15, color: HexColor('#40BFFF')),
+                )
+              ],
+            ),
+          ],
         ),
       ),
     );

@@ -26,8 +26,6 @@ class MyOrder extends StatelessWidget {
         navigatTo(context, screen: const OrderDetailsScreen());
       },
       child: Ink(
-        height: rheight(context) / 4,
-        width: rwidth(context),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             border:

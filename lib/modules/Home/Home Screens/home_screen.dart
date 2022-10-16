@@ -247,7 +247,8 @@ class HomeScreen extends StatelessWidget {
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                       crossAxisCount: 2,
-                      childAspectRatio: .7,
+                      childAspectRatio:
+                          rheight(context) / 2 / rwidth(context) / 1.55,
                       crossAxisSpacing: rheight(context) / 100,
                       children: List.generate(
                           cubit.products.length,
