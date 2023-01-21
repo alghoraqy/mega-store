@@ -73,12 +73,7 @@ class SuccessScreen extends StatelessWidget {
                             .copyWith(color: Colors.white),
                       ),
                       onPressed: () {
-                        AppCubit.get(context)
-                            .inCartList
-                            .forEach((e) => e.inCart = false);
-                        AppCubit.get(context).inCartList = [];
-                        navigatAndReplacement(context,
-                            screen: const HomeLayout());
+                      AppCubit.get(context).signOut(context);
                       })
                 ],
               ),

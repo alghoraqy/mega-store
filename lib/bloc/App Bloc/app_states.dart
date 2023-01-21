@@ -28,3 +28,6 @@ class ChangeShipToIndexState extends AppStates {}
 
 /// CHOOSE LANGUAGE STATES
 class ChooseLanguageState extends AppStates {}
+
+
+class SignOutState extends AppStates {}

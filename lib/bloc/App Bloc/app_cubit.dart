@@ -10,7 +10,10 @@ import 'package:mega_store/modules/Home/Home%20Screens/favourite_screen.dart';
 import 'package:mega_store/modules/Home/Home%20Screens/home_screen.dart';
 import 'package:mega_store/modules/Home/Home%20Screens/offer_screen.dart';
 import 'package:mega_store/shared/components/shared_component.dart';
+import 'package:mega_store/shared/shared_method.dart';
 import 'package:mega_store/static%20data/static_data.dart';
+
+import '../../modules/Home/Home Layout/home_layout.dart';
 
 class AppCubit extends Cubit<AppStates> {
   AppCubit() : super(AppInitState());
@@ -146,6 +149,8 @@ class AppCubit extends Cubit<AppStates> {
       product.inCart = false;
       inCartList.remove(product);
       product.quantity = 0;
+      finalPrice = finalPrice - product.price;
+      finalPriceMap.remove(product.id);
       showToast(text: 'Removed from Your Cart', color: Colors.red);
       debugPrint('remove' '$inCartList');
       emit(ChangeInCart());
@@ -193,5 +198,15 @@ class AppCubit extends Cubit<AppStates> {
   void chooseLang(String value) {
     selectedlanguage = value;
     emit(ChooseLanguageState());
+  }
+
+  /// SIGN OUT
+  signOut(context) {
+    inCartList.forEach((e) => e.inCart = false);
+    favouriteList.forEach((e) => e.isFavourite = false);
+    inCartList = [];
+    favouriteList = [];
+    navigatAndReplacement(context, screen: const HomeLayout());
+    emit(SignOutState());
   }
 }

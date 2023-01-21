@@ -7,8 +7,6 @@ Future navigatTo(context, {required Widget screen}) {
 }
 
 Future navigatAndReplacement(context, {required Widget screen}) {
-  return Navigator.pushReplacement(context,
-      MaterialPageRoute(builder: (context) {
-    return screen;
-  }));
+  return Navigator.pushAndRemoveUntil(context,
+      MaterialPageRoute(builder: (context) => screen), (route) => false);
 }
