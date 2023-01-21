@@ -15,5 +15,4 @@ Animation, Lottie Files
 
 APK : https://drive.google.com/file/d/1h_G5WT8V5icKW5_Oj5mB-Vu41xKELq-A/view?usp=sharing
 
-[Mega Store.zip](https://github.com/alghoraqy/mega-store/files/9800907/Mega.Store.zip)
 
