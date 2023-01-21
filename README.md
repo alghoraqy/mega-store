@@ -13,6 +13,6 @@ Remove from Cart dynamic.
 
 Animation, Lottie Files
 
-APK : https://drive.google.com/file/d/1h_G5WT8V5icKW5_Oj5mB-Vu41xKELq-A/view?usp=sharing
+APK : https://drive.google.com/file/d/1zu1PW5_NWjSeHBN-zLehnrDnY5y7XOs7/view?usp=sharing
 
 
